@@ -1,0 +1,26 @@
+{
+  "name": "homebridge-openweathermap-temperature",
+  "version": "0.0.1",
+  "description": "openweathermap temperature plugin for homebridge",
+  "license": "ISC",
+  "keywords": [
+    "homebridge-plugin",
+    "http",
+    "openweathermap",
+    "temperature sensor"
+  ],
+  "engines": {
+    "node": ">=0.12.0",
+    "homebridge": ">=0.2.0"
+  },
+  "author": {
+    "name": "@sholzmayer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sholzmayer/homebridge-openweathermap-temperature.git"
+  },
+  "dependencies": {
+    "sync-request": "^2.1.0"
+  }
+}
