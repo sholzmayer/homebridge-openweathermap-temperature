@@ -1,6 +1,9 @@
 var Service, Characteristic;
 var request = require('sync-request');
 
+const MIN_TEMPERATURE = -100,
+      MAX_TEMPERATURE = 100;
+
 module.exports = function (homebridge) {
     Service = homebridge.hap.Service;
     Characteristic = homebridge.hap.Characteristic;
@@ -74,7 +77,11 @@ OpenweathermapTemperature.prototype = {
         this.temperatureService = new Service.TemperatureSensor(this.name);
         this.temperatureService
                 .getCharacteristic(Characteristic.CurrentTemperature)
-                .on('get', this.getState.bind(this));
+                .on('get', this.getState.bind(this))
+		.setProps({
+ 			minValue: MIN_TEMPERATURE,
+ 			maxValue: MAX_TEMPERATURE
+ 		});
 
         return [this.informationService, this.temperatureService];
     }
