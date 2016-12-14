@@ -44,7 +44,7 @@ OpenweathermapTemperature.prototype = {
         var res = request(this.http_method, this.url, {});
         if (res.statusCode > 400) {
             this.log('HTTP get state function failed');
-            callback(error);
+            callback(res.statusCode);
         } else {
             this.log('HTTP get state function succeeded!');
             var info = JSON.parse(res.body);
