@@ -1,6 +1,6 @@
 {
   "name": "homebridge-openweathermap-temperature",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "openweathermap temperature plugin for homebridge",
   "license": "ISC",
   "keywords": [
